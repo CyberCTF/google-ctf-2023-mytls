@@ -1,0 +1,14 @@
+{
+  "title": "Google CTF 2023: myTLS",
+  "description": "A home-made mutual TLS with forward secrecy: the server holds the flag for the admin. You have a guest certificate and key.",
+  "question": "Retrieve the flag from the challenge service.",
+  "category": "CRYPTO",
+  "difficulty": 3,
+  "evidence_kind": "SECRET",
+  "capabilities": [
+    "mutual-tls",
+    "key-compromise-impersonation",
+    "ecdh",
+    "cryptography"
+  ]
+}
