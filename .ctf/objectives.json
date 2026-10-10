@@ -1,0 +1,57 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Read the admin's flag",
+      "prompt": "Get the server to treat you as the admin and read the flag it keeps for the admin.",
+      "check": {
+        "evidence": "SECRET",
+        "format": "CTF{%s}"
+      },
+      "dev": "CTF{dev-google-ctf-2023-mytls}",
+      "hints": [
+        "Read how the session key is derived from both sides' keys.",
+        "Which private key would let you impersonate whom? The flag's name is a strong hint."
+      ],
+      "steps": [
+        {
+          "key": "exchange",
+          "title": "Identify the key exchange",
+          "prompt": "Which key exchange do the certificates' keys use? (acronym)",
+          "check": {
+            "answer": [
+              "ecdh",
+              "elliptic curve diffie-hellman",
+              "ecdhe"
+            ]
+          }
+        },
+        {
+          "key": "cert",
+          "title": "Know your identity",
+          "prompt": "Which certificate are you given as a player?",
+          "check": {
+            "answer": [
+              "guest",
+              "guest certificate",
+              "the guest certificate"
+            ]
+          }
+        },
+        {
+          "key": "attack",
+          "title": "Name the attack",
+          "prompt": "What is the attack called where knowing one party's private key lets you impersonate others to that party?",
+          "check": {
+            "answer": [
+              "key compromise impersonation",
+              "kci",
+              "kci attack",
+              "key-compromise impersonation"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
