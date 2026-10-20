@@ -1,8 +1,11 @@
 {
+  "project_name": "cyberlabs-google-ctf-2023-mytls",
+  "slug": "google-ctf-2023-mytls",
   "title": "Google CTF 2023: myTLS",
   "description": "A home-made mutual TLS with forward secrecy: the server holds the flag for the admin. You have a guest certificate and key.",
-  "question": "Impersonate the admin to the home-made TLS server and read the flag.",
-  "category": "CRYPTO",
+  "category": "crypto",
   "difficulty": 3,
-  "evidence_kind": "SECRET"
+  "evidence_kind": "SECRET",
+  "capabilities": [],
+  "question": "Impersonate the admin to the home-made TLS server and read the flag."
 }
